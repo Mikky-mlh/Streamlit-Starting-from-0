@@ -3,6 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
 import time
+import os
 
 # Page configuration with updated settings
 st.set_page_config(
@@ -12,12 +13,19 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Find the directory where THIS script (Portfolio.py) is located
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define the paths based on that location
+css_file = os.path.join(current_dir, "style.css")
+img_file = os.path.join(current_dir, "Frontend.png")
+
 # Custom CSS for better styling
-def local_css(file_name):
-    with open(file_name) as f:
+def local_css(file_path):
+    with open(file_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("Project/style.css")
+local_css(css_file)
 
 # Load Lottie animations
 def load_lottieurl(url):
@@ -31,7 +39,7 @@ lottie_web = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ikfdh
 lottie_contact = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_3rwasyjy.json")
 
 # Load image
-img_cert = Image.open("Project/Frontend.png")
+img_cert = Image.open(img_file)
 
 # Header with gradient text
 st.markdown("""
