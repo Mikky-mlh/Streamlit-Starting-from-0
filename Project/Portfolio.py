@@ -17,7 +17,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("Project Portfolio/style.css")
+local_css("style.css")
 
 # Load Lottie animations
 def load_lottieurl(url):
@@ -31,7 +31,7 @@ lottie_web = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ikfdh
 lottie_contact = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_3rwasyjy.json")
 
 # Load image
-img_cert = Image.open("Project Portfolio/Frontend.png")
+img_cert = Image.open("Frontend.png")
 
 # Header with gradient text
 st.markdown("""
@@ -226,33 +226,21 @@ with tab3:
             
         with right_col:
             st.markdown("""
-                <div class="contact-card">
-                    <h2>📱 Get In Touch</h2>
-                    <p>I'm always open to discussing new opportunities, creative projects, or just chatting about tech!</p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <div>
-                                <div class="contact-label">Email</div>
-                                <div class="contact-value">yuvrajsarathe07@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <div>
-                                <div class="contact-label">Phone</div>
-                                <div class="contact-value">+91 8349498358</div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <div class="contact-label">Location</div>
-                                <div class="contact-value">Bhopal, India</div>
-                            </div>
-                        </div>
+                <div style="background-color: #1E1E1E; border-radius: 10px; padding: 20px; font-family: 'Consolas', 'Monaco', monospace; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #333;">
+                    <div style="display: flex; gap: 8px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #FF5F56;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #FFBD2E;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #27C93F;"></div>
+                        <span style="margin-left: 10px; color: #888; font-size: 12px;">contact.json</span>
                     </div>
+                    <div style="color: #D4D4D4; line-height: 1.6;">
+                        <span style="color: #C586C0;">{</span><br>
+                        &nbsp;&nbsp;<span style="color: #9CDCFE;">"name"</span>: <span style="color: #CE9178;">"Yuvraj Sarathe"</span>,<br>
+                        &nbsp;&nbsp;<span style="color: #9CDCFE;">"email"</span>: <span style="color: #CE9178;">"yuvrajsarathe07@gmail.com"</span>,<br>
+                        &nbsp;&nbsp;<span style="color: #9CDCFE;">"phone"</span>: <span style="color: #CE9178;">"+91 8349498358"</span>,<br>
+                        &nbsp;&nbsp;<span style="color: #9CDCFE;">"location"</span>: <span style="color: #CE9178;">"Bhopal, India"</span>,<br>
+                        &nbsp;&nbsp;<span style="color: #9CDCFE;">"status"</span>: <span style="color: #CE9178;">"Open to Opportunities"</span><br>
+                        <span style="color: #C586C0;">}</span>
                 </div>
             """, unsafe_allow_html=True)
     
