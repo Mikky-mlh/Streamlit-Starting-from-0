@@ -1,0 +1,466 @@
+/* Modern Portfolio Styling for Streamlit */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(120deg, #ffd89b 0%, #19547b 100%);
+    --accent-blue: #64ffda;
+    --dark-bg: #0a192f;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-light: #e6f1ff;
+    --text-muted: #8892b0;
+}
+
+/* Global Styles */
+.stApp {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hide Streamlit Branding (but keep menu for deploy) */
+footer {visibility: hidden;}
+
+/* Main Header */
+.main-header {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    background: linear-gradient(180deg, rgba(100, 255, 218, 0.1) 0%, transparent 100%);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #64ffda 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(100, 255, 218, 0.3);
+    box-shadow: 0 10px 40px rgba(100, 255, 218, 0.1);
+}
+
+.card h2 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Skills Container */
+.skills-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.skill-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.skill-tag:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: scale(1.05);
+}
+
+/* Interests Section */
+.interests {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.interests h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.interests ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interests li {
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* GitHub Button */
+.github-button {
+    display: inline-block;
+    background: var(--primary-gradient);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.github-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-blue);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section Header */
+.section-header h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Certificate Container */
+.certificate-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.certificate-container:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue);
+}
+
+.certificate-details {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.certificate-details h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.certificate-details p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.certificate-details ul {
+    color: var(--text-muted);
+    padding-left: 1.5rem;
+}
+
+.certificate-details li {
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+/* Project Styles */
+.project-meta {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.project-meta p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.project-description {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.project-description p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.demo-button {
+    display: inline-block;
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.demo-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.project-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.3), transparent);
+    margin: 2rem 0;
+}
+
+/* Contact Styles */
+.contact-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.contact-card h2 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(100, 255, 218, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.contact-label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-value {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Social Links */
+.social-links {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.social-links h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.social-button {
+    display: block;
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.social-button:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: translateX(5px);
+    border-color: var(--accent-blue);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.contact-form-container h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* Streamlit Form Inputs */
+.stTextInput input, .stTextArea textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(100, 255, 218, 0.2) !important;
+    border-radius: 8px !important;
+    color: var(--text-light) !important;
+    padding: 0.8rem !important;
+}
+
+.stTextInput input:focus, .stTextArea textarea:focus {
+    border-color: var(--accent-blue) !important;
+    box-shadow: 0 0 0 1px var(--accent-blue) !important;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
