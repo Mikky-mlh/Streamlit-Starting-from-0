@@ -17,7 +17,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("style.css")
+local_css("Project Portfolio/style.css")
 
 # Load Lottie animations
 def load_lottieurl(url):
@@ -31,7 +31,7 @@ lottie_web = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ikfdh
 lottie_contact = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_3rwasyjy.json")
 
 # Load image
-img_cert = Image.open("Frontend.png")
+img_cert = Image.open("Project Portfolio/Frontend.png")
 
 # Header with gradient text
 st.markdown("""
